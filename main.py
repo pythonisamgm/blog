@@ -71,9 +71,8 @@ def contact():
 
 
 #----------------------------------------------------------------------- send email with smtb--------------------------------------------------
-my_email = "pythonisamgm@gmail.com"
-my_password = "ueyf nwpf caxj velt"
-
+my_email = os.getenv("EMAIL")
+my_password = os.getenv("PASSWORD")
 
 def send_mail(name, email, phone, message):
     file_content =f" Name: {name}\n Email: {email}\n Phone: {phone}\n Message: {message}"
